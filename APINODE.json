@@ -1,0 +1,732 @@
+{
+	"info": {
+		"_postman_id": "8ffaae0f-9765-431e-b404-183d429889c9",
+		"name": "Proyecto NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SIGNUP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jose Luis3\",\n\t\"email\": \"jose3@gmail.com\",\n\t\"password\": \"jose30\",\n    \"role\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/signup",
+					"protocol": "https",
+					"host": [
+						"nodeapi-jose",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGNIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"jose3@gmail.com\",\n\t\"password\": \"jose30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/signin",
+					"protocol": "https",
+					"host": [
+						"nodeapi-jose",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGNOUT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/signout",
+					"protocol": "https",
+					"host": [
+						"nodeapi-jose",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"signout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3ODg4NTk2MjA1ODA1MThmZDM1NDAiLCJpYXQiOjE2MDkwMDk1MTl9.aCOQqVSCsgFEDr8KLopFmS4BJBD32qS2myxTMKYq_s0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Jose Luis",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jose@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/user/5fe788859620580518fd3540",
+					"protocol": "https",
+					"host": [
+						"nodeapi-jose",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"5fe788859620580518fd3540"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3ODg4NTk2MjA1ODA1MThmZDM1NDAiLCJpYXQiOjE2MDkwMDk1MTl9.aCOQqVSCsgFEDr8KLopFmS4BJBD32qS2myxTMKYq_s0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jose Luis Update\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/user/5fe788859620580518fd3540",
+					"protocol": "https",
+					"host": [
+						"nodeapi-jose",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"user",
+						"5fe788859620580518fd3540"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST ALL CATEGORY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3ODg4NTk2MjA1ODA1MThmZDM1NDAiLCJpYXQiOjE2MDkwMDk1MTl9.aCOQqVSCsgFEDr8KLopFmS4BJBD32qS2myxTMKYq_s0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/categories",
+					"protocol": "https",
+					"host": [
+						"nodeapi-jose",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE CATEGORY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Tareas de Trabajo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/category/create/5fe78a487784080c282c9efe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"create",
+						"5fe78a487784080c282c9efe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ CATEGORY",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3ODg4NTk2MjA1ODA1MThmZDM1NDAiLCJpYXQiOjE2MDkwMDk1MTl9.aCOQqVSCsgFEDr8KLopFmS4BJBD32qS2myxTMKYq_s0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/category/5fe78a7e7784080c282c9eff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"5fe78a7e7784080c282c9eff"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CATEGORY",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Categoria de Trabajo Update\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/category/5fe78a7e7784080c282c9eff/5fe78a487784080c282c9efe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"5fe78a7e7784080c282c9eff",
+						"5fe78a487784080c282c9efe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE CATEGORY",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/category/5fe78a7e7784080c282c9eff/5fe78a487784080c282c9efe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"5fe78a7e7784080c282c9eff",
+						"5fe78a487784080c282c9efe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST ALL TASK DETAILS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task-detail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task-detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE TASK DETAILS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"detail\": \"Tarea principal\",\n    \"summary\": \"Tarea Pri\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task-detail/create/5fe78a487784080c282c9efe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task-detail",
+						"create",
+						"5fe78a487784080c282c9efe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ TASK DETAILS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task-detail/5fe78d74365b451dec6a02eb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task-detail",
+						"5fe78d74365b451dec6a02eb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE TASK DETAILS",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"detail\": \"Tarea Principal Update\",\n    \"summary\": \"Tarea principal Update\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task-detail/5fe78d74365b451dec6a02eb/5fe78a487784080c282c9efe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task-detail",
+						"5fe78d74365b451dec6a02eb",
+						"5fe78a487784080c282c9efe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TASK DETAILS",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OGE0ODc3ODQwODBjMjgyYzllZmUiLCJpYXQiOjE2MDkwMDk3NzJ9.w-1KNmXBq6DbXq7UKGSK28aWLia9QfaPAaiAmJAB2u0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task-detail/5fe78d74365b451dec6a02eb/5fe78a487784080c282c9efe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task-detail",
+						"5fe78d74365b451dec6a02eb",
+						"5fe78a487784080c282c9efe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE TASK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OTBlMTk4NjQ1NDI4ZDRhNDIzNmUiLCJpYXQiOjE2MDkwMTE0MzN9.AVmYkj1TJS9jVtCddzydQh2CssRyUNTM3LeiiqipI6M"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Tarea de pruebas\",\r\n    \"summary\":\"Tarea de pruebas para el sistema de node\",\r\n    \"date_emit\":\"2020-05-05\",\r\n    \"category_id\":\"5fe78ef5614a3b1d046f1a85\",\r\n    \"task_detail_id\":\"5fe78ee7614a3b1d046f1a84\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task/create/5fe790e198645428d4a4236e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						"create",
+						"5fe790e198645428d4a4236e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ TASK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OTBlMTk4NjQ1NDI4ZDRhNDIzNmUiLCJpYXQiOjE2MDkwMTE0MzN9.AVmYkj1TJS9jVtCddzydQh2CssRyUNTM3LeiiqipI6M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task/5fe79178a042ca275465890b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						"5fe79178a042ca275465890b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE TASK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OTBlMTk4NjQ1NDI4ZDRhNDIzNmUiLCJpYXQiOjE2MDkwMTE0MzN9.AVmYkj1TJS9jVtCddzydQh2CssRyUNTM3LeiiqipI6M"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Tarea de pruebas\",\r\n    \"summary\":\"Tarea de pruebas para el sistema de node\",\r\n    \"date_emit\":\"2020-05-05\",\r\n    \"category_id\":\"5fe78ef5614a3b1d046f1a85\",\r\n    \"task_detail_id\":\"5fe78ee7614a3b1d046f1a84\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task/5fe79178a042ca275465890b/5fe790e198645428d4a4236e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						"5fe79178a042ca275465890b",
+						"5fe790e198645428d4a4236e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TASK",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmRmNWI2ODQwMjI4YTNjOTBkODA5M2IiLCJpYXQiOjE2MDg1MDI5MjV9.Jv_OQMjBLJ-IVanMLnxghM3o15VYku99OObGvLF9_jU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/movie/5fdfcc914340f84ce485347d/5fdf5b6840228a3c90d8093b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movie",
+						"5fdfcc914340f84ce485347d",
+						"5fdf5b6840228a3c90d8093b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST ALL TASK",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmU3OTBlMTk4NjQ1NDI4ZDRhNDIzNmUiLCJpYXQiOjE2MDkwMTE0MzN9.AVmYkj1TJS9jVtCddzydQh2CssRyUNTM3LeiiqipI6M"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://nodeapi-jose.herokuapp.com/api/task?sortBy=name&order=desc&limit=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "name"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						},
+						{
+							"key": "limit",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
